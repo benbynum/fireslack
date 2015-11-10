@@ -18,4 +18,12 @@ angular.module('angularfireSlackApp')
 		channelsCtrl.newChannel = {
 			name: ''
 		}
+
+		channelsCtrl.createChannel = function() {
+			channelsCtrl.channels.$add(channelsCtrl.newChannel).then(function(){
+				channelsCtrl.newChannel = {
+					name: ''
+				}
+			})
+		}
 	})
