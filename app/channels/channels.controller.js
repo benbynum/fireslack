@@ -20,6 +20,7 @@ angular.module('angularfireSlackApp')
 		}
 
 		channelsCtrl.createChannel = function() {
+			// $add on the $firebaseArray is similar to .push() on a js Array, also returns a promise
 			channelsCtrl.channels.$add(channelsCtrl.newChannel).then(function(){
 				channelsCtrl.newChannel = {
 					name: ''
