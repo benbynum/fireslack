@@ -68,4 +68,4 @@ angular
 
     $urlRouterProvider.otherwise('/');
   })
-  .constant('FirebaseUrl', 'https://beroby-fireslack.firebase.io.com/');
+  .constant('FirebaseUrl', 'https://beroby-fireslack.firebaseio.com/');
