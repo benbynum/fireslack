@@ -5,4 +5,18 @@ angular.module('angularfireSlackApp')
 		// set messages and channel name to the respective dependencies
 		messagesCtrl.messages = messages;
 		messagesCtrl.channelName = channelName;
+
+		messagesCtrl.message = '';
+
+		messagesCtrl.sendMessage = function() {
+			if(messagesCtrl.message.length > 0) {
+				messagesCtrl.messages.$add({
+					uid: profile.$id,
+					body: messagesCtrl.message,
+					timestamp: Firebase.ServerValue.TIMESTAMP
+				}).then(function () {
+					messagesCtrl.message = '';
+				});
+			}
+		};
 	});
