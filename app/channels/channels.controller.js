@@ -9,8 +9,9 @@ angular.module('angularfireSlackApp')
 		channelsCtrl.getDisplayName = Users.getDisplayName;
 		channelsCtrl.getGravatar = Users.getGravatar;
 
-		channels.Ctrl.logout = function () {
-			Auth.$unath();
+		channelsCtrl.logout = function () {
+			console.log('logging out')
+			Auth.$unauth();
 			$state.go('home');
 		}
 	})
