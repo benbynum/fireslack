@@ -25,6 +25,8 @@ angular.module('angularfireSlackApp')
 				channelsCtrl.newChannel = {
 					name: ''
 				}
+				// close createChannel after channel created
+				$state.go('channels');
 			})
 		}
 	})

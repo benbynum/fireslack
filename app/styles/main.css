@@ -95,7 +95,8 @@ body {
   bottom:0;
   padding:15px;
   background:#3E313C;
-  width:19.5%;
+  /*width:19.5%;*/
+  width:15.5%;
 }
 
 .sidebar .my-info .user-pic {
@@ -143,6 +144,7 @@ body {
 }
 
 .message-pane {
+  position: fixed; /* fix display */
   display:inline-block;
   vertical-align: top;
   height:100%;
