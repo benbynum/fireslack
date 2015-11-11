@@ -11,6 +11,7 @@ body {
 
 .page-wrapper .logo-img {
   margin-top:-10px;
+  border-radius: 10px;
 }
 
 
@@ -27,14 +28,15 @@ body {
   width:19.5%;
   vertical-align: top;
   height:100%;
-  background:#4d394b;
+  /*background:#4d394b;*/
+  background: #73473D;
   position:relative;
   overflow-y:scroll;
   padding-bottom:100px;
 }
 
 .sidebar .slack-name {
-  background:#3E313C;
+  background: #39231E;
   padding:15px 0px 15px 15px;
 }
 
@@ -48,7 +50,8 @@ body {
 
 .sidebar .channel-list {
   margin-top:20px;
-  background:#4d394b;
+  /*background:#4d394b;*/
+  background: #73473D;
   position:relative;
 }
 
@@ -94,7 +97,7 @@ body {
   position:fixed;
   bottom:0;
   padding:15px;
-  background:#3E313C;
+  background:#4E3029;
   width:19.5%;
 }
 
