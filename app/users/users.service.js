@@ -25,7 +25,7 @@ angular.module('angularfireSlackApp')
 						});
 					}
 				});
-			}
+			},
 			all: users
 		};
 
