@@ -35,9 +35,36 @@ angular.module('app.directives', [])
   			console.log('scroll height: ', el.scrollHeight - el.offsetHeight)
   		})
 
-  		
-
-
   	}
   };
+})
+.directive('menuExpander', function() {
+  return {
+    restrict: 'A',
+    link: function(scope, element, attrs) {
+      console.log('menu expander directive init')
+
+      var sidebar = $('.sidebar')
+
+      element.bind("click", function() {
+        console.log('nav clicked')
+
+        var sidebarDisplay = sidebar.css('display')
+
+        // toggle display none of sidebar
+                console.log('sidebar, sidebarDisplay', sidebar, sidebarDisplay)
+        if (sidebarDisplay == 'none') {
+          sidebar.css('display', 'inline-block')
+        } else {
+          sidebar.css('display', 'none')
+        }
+      })
+
+      $('.channel-list').bind("click", function() {
+        console.log('channel list clicked')
+
+        if ( window.innerWidth < 768 ) sidebar.css('display', 'none')
+      })
+    }
+  }
 })

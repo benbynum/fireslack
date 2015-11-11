@@ -1,5 +1,13 @@
 <div class="main">
+
+	<!-- BEDIN: Mobile Nav -->
 	
+	<!-- END: Mobile Nav -->
+	<div class="mobile-nav visible-xs">
+		<div class="mobile-menu" menu-expander>
+			<span class="glyphicon glyphicon-menu-hamburger"></span>	
+		</div>
+	</div>
 	<!-- BEGIN: Sidebar -->
 	<div class="sidebar">
 		
@@ -13,7 +21,7 @@
 				<a ui-sref="channels.messages({channelId: channel.$id})"># {{ channel.name }}</a>
 			</div>
 
-			<div class="channel create">
+			<div class="channel create hidden-xs">
 				<a ui-sref="channels.create">+ create channel</a>
 			</div>
 
