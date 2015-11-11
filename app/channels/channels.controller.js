@@ -26,4 +26,7 @@ angular.module('angularfireSlackApp')
 				$state.go('channels.messages', {channelId: ref.key()})
 			})
 		}
+
+		// set the current user as online
+		Users.setOnline(profile.$id)
 	})
