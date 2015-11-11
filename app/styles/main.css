@@ -252,9 +252,12 @@ body {
   }
   .message-pane {
     width: 100%;
+    height: inherit;
+    padding: 15px;
   }
   .message-pane .message-form {
     width: auto;
+    padding-top: 15px;
   }
   .message-pane .header {
     display: none;
