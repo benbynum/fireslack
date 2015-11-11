@@ -125,7 +125,7 @@ angular
           },
           channelName: function($stateParams, Users) {
             return Users.all.$loaded().then(function() {
-              return '@'+Users.getDisplayName($stateParams.uid)
+              return '@'+ Users.getDisplayName($stateParams.uid)
             });
           }
         }
