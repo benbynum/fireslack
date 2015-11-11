@@ -12,8 +12,11 @@ angular.module('angularfireSlackApp')
 
 		channelsCtrl.logout = function () {
 			console.log('logging out')
-			Auth.$unauth();
-			$state.go('home');
+			channelsCtrl.profile.online = null;
+			channelsCtrl.profile.$save().then(function(){
+				Auth.$unauth();
+				$state.go('home');
+			})
 		}
 
 		channelsCtrl.newChannel = {
