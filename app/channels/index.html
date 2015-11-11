@@ -22,6 +22,7 @@
 			<div class="channel" ng-repeat="user in channelsCtrl.users">
 				<!-- EDIT: ui-sref value incorrect in tutorial as channels.private instead of channels.direct -->
 				<a ng-if="user.$id !== channelsCtrl.profile.$id" ui-sref="channels.direct({uid: user.$id})" ui-sref-active="selected">
+					<span class="presence" ng-class="{online: user.online}"></span>
 					{{ user.displayName}}
 				</a>
 			</div>
