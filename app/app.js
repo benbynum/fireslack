@@ -12,7 +12,8 @@ angular
   .module('angularfireSlackApp', [
     'firebase',
     'angular-md5',
-    'ui.router'
+    'ui.router',
+    'app.directives'
   ])
   .config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider
